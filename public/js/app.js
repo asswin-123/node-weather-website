@@ -1,10 +1,10 @@
 
 $(document).ready( () => {
-    console.log($('#textone').text())
+   
     $('.btn').click(() =>{
        const location =$('.text').val()
     
-        const url='http://localhost:3000/weather?address='+location
+        const url='/weather?address='+location
 
         $('#textone').text("loading..")
         $('#texttwo').text('')

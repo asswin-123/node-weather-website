@@ -4,6 +4,7 @@ const path= require('path')
 const geocode = require('./utils/geocode')
 const forecast = require('./utils/forecast')
 const app =express()
+const port = process.env.PORT || 3000
 // define paths for express config
 const pathDirectory = path.join('__dirname','../public')
 const viewPath = path.join('__dirname','../templates/views')
@@ -74,6 +75,6 @@ app.get('*',() => {
         name:'Asswin'
     })
 })
-app.listen(3000,() => {
+app.listen(port,() => {
     console.log("the server is started")
 })
